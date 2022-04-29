@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>ADMIN PORTAL - UTAR WELLNESS CENTER</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <%- include('headerMenu'); %>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+             <li><a href="/adminportal" class="smoothScroll">Dashboard</a></li>   
+             <li class="nav-item dropdown has-arrow">
+                <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                <span class="user-img">
+                    <img class="rounded-circle" src="assets/img/user.jpg" width="24" alt="Admin">
+                    <span class="status online"></span>
+                </span>
+                <span>Admin</span>
+                </a>
+                <div class="dropdown-menu">
+                    <form method="POST" action="/admin-logout">
+                        <input type="submit" class="dropdown-item" value="Logout">
+                    </form>
+                </div>
+              </li>
+          </ul>
+      </div>
+    </section>
+
+    <div class="content" style="font-size: 14px;">
+        <div class="row">
+            <div class="col">
+                <h4 class="page-title text-center p-4 m-4">Submitted Assesments</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="col-12">
+                    <div id='appointment'>
+                        <% for (var i = 0; i < submittedAssesmentsList.length; i++) { %>
+                        <div class="card">
+                            <div class="card-header" style="background-color:rgb(27, 177, 223)">
+                                <h5 class="card-title"><%= submittedAssesmentsList[i].firstname %> <%= submittedAssesmentsList[i].lastname %></h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Gender: <%= submittedAssesmentsList[i].sex %></li>
+                                    <li class="list-group-item">Age Group: <%= submittedAssesmentsList[i].age %></li>
+                                    <li class="list-group-item">Have you been diagnosed with COVID-19 in the past months and recovered? <br><b><%= submittedAssesmentsList[i].prevDiagnosed %></b></li>
+                                    <li class="list-group-item">In the last 48 hours, have you experienced any of the following symptoms: <br><b><%= submittedAssesmentsList[i].symptoms1 %></b></li>
+                                    <li class="list-group-item">In the last 48 hours, have you experienced any of the following symptoms: <br><b><%= submittedAssesmentsList[i].symptoms2 %></b></li>
+                                    <li class="list-group-item">In the last 48 hours, have you experienced any of the following severe respiratory illness: <br><b><%= submittedAssesmentsList[i].respIllness %></b></li>
+                                    <li class="list-group-item">In the past 2 weeks, had you traveled to foreign country? <br><b><%= submittedAssesmentsList[i].abroadVisit %></b></li>
+                                    <li class="list-group-item">In the past 2 weeks, had you traveled in public transport? <br><b><%= submittedAssesmentsList[i].pubVehUsed %></b></li>
+                                    <li class="list-group-item">In the past 2 weeks, did you attended any events or areas associated with known COVID-19 cluster/red zones?<br><b><%= submittedAssesmentsList[i].visitRedZone %></b></li>
+                                    <li class="list-group-item">In the past 2 weeks, did you have contact with someone who had symptoms of COVID-19, but who had not yet tested positive or had not yet had a test?<br><b><%= submittedAssesmentsList[i].closeContactwithSymptomatic %></b></li>
+                                    <li class="list-group-item">In the past 2 weeks, did you have contact with a known COVID-19 case?<br><b><%= submittedAssesmentsList[i].closeContactPatient %></b></li>
+                                    <li class="list-group-item">Did you consult with a healthcare provider or try to get a coronavirus test because of your symptoms? <br><b><%= submittedAssesmentsList[i].consulOrTest %></b></li>
+                                    <li class="list-group-item">If you consult with a health care provider, did he/she give you any of the following medications to treat COVID-19? <br><b><%= submittedAssesmentsList[i].medicine %></b></li>
+                                </ul>  
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-danger btn-xl" style="font-size:14px">Delete</a>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="delete_appointment" class="modal fade delete-modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="assets/img/sent.png" alt="" width="50" height="46">
+                    <h3>Are you sure want to delete this Appointment?</h3>
+                    <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="sidebar-overlay" data-reff=""></div>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="admin-appointment.js"></script>
+<script>
+    $(function () {
+        $('#datetimepicker3').datetimepicker({
+            format: 'LT'
+        });
+        $('#datetimepicker4').datetimepicker({
+            format: 'LT'
+        });
+    });
+</script>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+
+ 
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UTAR WELLNESS CENTER</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+
+    <script src="patient-login.js"></script>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body
+    id="top"
+    data-spy="scroll"
+    data-target=".navbar-collapse"
+    data-offset="50"
+  >
+    <%- include('headerMenu'); %>
+</div>
+</section>
+
+    <body>
+      <div id="formContainer">
+        <div id="header"></div>
+        <h1
+          style="
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-size: 22px;
+          "
+        >
+          Patient Portal
+        </h1>
+        <br />
+        <p>Please fill in this form to create an account.</p>
+        <hr />
+        <form action="/signup" method="POST">
+          <label for="email"><b>Email Address</b></label> <br />
+          <input type="email" placeholder=" email " id="email" name="email" />
+          <br />
+          <br />
+  
+          <label for="password"><b>Password</b></label> <br />
+          <input type="password" placeholder=" password " id="password" name="password" />
+  
+          <p>Have An Account?<a href="/patient-signin">SIGN IN</a>.</p>
+          <input type="submit" id="signUp" value="Sign Up">
+        </form>
+
+      </div>
+
+      <!-- FOOTER -->
+      <%- include('footer'); %>
+    </body>
+  </body>
+</html>

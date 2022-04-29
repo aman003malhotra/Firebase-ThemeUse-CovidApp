@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>ADMIN PORTAL - UTAR WELLNESS CENTER</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <%- include('headerMenu'); %>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+             <li><a href="/adminportal" class="smoothScroll">Dashboard</a></li>   
+             <li class="nav-item dropdown has-arrow">
+                <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                <span class="user-img">
+                    <img class="rounded-circle" src="assets/img/user.jpg" width="24" alt="Admin">
+                    <span class="status online"></span>
+                </span>
+                <span>Admin</span>
+                </a>
+                <div class="dropdown-menu">
+                    <form method="POST" action="/admin-logout">
+                        <input type="submit" class="dropdown-item" value="Logout">
+                    </form>
+                </div>
+              </li>
+          </ul>
+      </div>
+    </section>
+
+    <div class="content" style="font-size: 14px;">
+        <div class="row">
+            <div class="col-sm-4 col-3">
+                <h4 class="page-title">Appointments</h4>
+            </div>
+            <div class="col-sm-8 col-9 text-right m-b-20">
+                <a href="/add-appointment" class="btn btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Appointment</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <div id='appointment'>
+                    <table class="table table-striped custom-table">
+                        <thead>
+                            <tr>
+                                <th>Appointment ID</th>
+                                <th>Patient Name</th>
+                                <th>Email Address</th>
+                                <th>Doctor Name</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Time</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (var i = 0; i < appointmentList.length; i++) { %>
+                            <tr>
+                                <td id="AppointmentId"><%= appointmentList[i].apptID %></td>
+                                <td id="PatientName"><%= appointmentList[i].patientName %></td>
+                                <td id="EmailAddress"><%= appointmentList[i].patientEmail %></td>
+                                <td id="DoctorName"><%= appointmentList[i].DoctorName %></td>
+                                <td id="AppointmentDate"><%= appointmentList[i].date %></td>
+                                <td id="AppointmentTime"><%= appointmentList[i].time %></td>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="delete_appointment" class="modal fade delete-modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="assets/img/sent.png" alt="" width="50" height="46">
+                    <h3>Are you sure want to delete this Appointment?</h3>
+                    <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="sidebar-overlay" data-reff=""></div>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="admin-appointment.js"></script>
+<script>
+    $(function () {
+        $('#datetimepicker3').datetimepicker({
+            format: 'LT'
+        });
+        $('#datetimepicker4').datetimepicker({
+            format: 'LT'
+        });
+    });
+</script>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+
+</html>

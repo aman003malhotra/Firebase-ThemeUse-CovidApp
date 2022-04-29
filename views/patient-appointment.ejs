@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UTAR WELLNESS CENTRE</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>UTAR</span> WELLNESS CENTRE</h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>UTAR WELLNESS CENTRE</h3>
+        <ul>
+          <li><i class="fa fa-calendar-plus-o"></i> 10:00 AM - 5:00 PM (Mon-Fri)</li>
+          <li><i class="fa fa-phone"></i>  05-468888</li>
+          <li><i class="fa fa-envelope"></i> <a href="#"><utarwellnesscentre@edu class="my"></utarwellnesscentre@edu></a></li>
+        </ul>
+      </div>
+      <div class="appointment">
+        <h3>MAKE AN APPOINTMENT</h3>
+        <a href="/patientportal" style="text-decoration:none;color:black;font-weight:bolder">Dashboard</a>
+        <div class="alert">Your message has been sent</div>
+
+        <form id="appointmentForm" action="/patient-appointment" method="POST">
+            <p>
+                <label>Email Address</label>
+                <input type="email" name="email" id="email" required>
+              </p>
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label for="date">Select Date</label>
+             <input type="date" name="date" id="date" class="form-control">
+          </p>
+         
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p class="full">
+            <label> Additional Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <!-- <button type="submit">Make An Appointment</button> -->
+            <input type="submit" value="Make An Appointment">
+          </p>
+          <% if (message != null) {%>
+            <span class="text-success"><%= message%> </span>
+        <% }%>
+        </form>
+      </div>
+    </div>
+  </div>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase.js"></script>
+
+     <script src="appointment.js"></script>
+</body>
+</html>

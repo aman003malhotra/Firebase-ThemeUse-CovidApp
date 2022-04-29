@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADMIN PORTAL</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-style.css" />
+  </head>
+  <body
+    id="top"
+    data-spy="scroll"
+    data-target=".navbar-collapse"
+    data-offset="50"
+  >
+
+  <%- include('headerMenu'); %>
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/admin-appointment" class="smoothScroll">Appointments</a></li>
+                <li><a href="/submittedAssesments" class="smoothScroll">Assessment</a></li>
+                <li class="nav-item dropdown has-arrow">
+                  <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                    <span>LOGOUT</span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <form method="POST" action="/admin-logout">
+                      <input type="submit" class="dropdown-item" value="Logout">
+                    </form>
+                  </div>
+                </li>
+              </ul> 
+            </div>
+          </div>
+     </section>
+
+    <div class="content">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+            <span class="dash-widget-bg1"
+              ><i class="fa fa-newspaper-o" aria-hidden="true"></i
+            ></span>
+            <div class="dash-widget-info text-right">
+              <h3><%= appointmentsNum %></h3>
+              <span class="widget-title1"
+                >Appointments <i class="fa fa-check" aria-hidden="true"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+            <span class="dash-widget-bg2"><i class="fa fa-book"></i></span>
+            <div class="dash-widget-info text-right">
+              <h3><%= submittedAssesmentsNum %></h3>
+              <span class="widget-title2"
+                >Assessments<i class="fa fa-check" aria-hidden="true"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+            <span class="dash-widget-bg3"
+              ><i class="fa fa-user-o" aria-hidden="true"></i
+            ></span>
+            <div class="dash-widget-info text-right">
+              <h3><%= requestedAppointmentsNum %></h3>
+              <span class="widget-title3"
+                >Requested Appointments<i
+                  class="fa fa-check"
+                  aria-hidden="true"
+                ></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+            <span class="dash-widget-bg4"
+              ><i class="fa fa-stethoscope" aria-hidden="true"></i
+            ></span>
+            <div class="dash-widget-info text-right">
+              <h3>3</h3>
+              <span class="widget-title4"
+                >Doctors <i class="fa fa-check" aria-hidden="true"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="font-size:14px;">
+        <div class="col-12 col-md-6 col-lg-8 col-xl-8">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title d-inline-block">Requested Appointments</h4>
+              <a href="/requestedAppointments" class="btn btn-primary float-right">View all</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+          <div class="card member-panel">
+            <div class="card-header bg-white">
+              <h4 class="card-title mb-0">Doctors</h4>
+            </div>
+            <div class="card-body" style="height:350px">
+              <ul class="contact-list">
+                <li>
+                  <div class="contact-cont">
+                    <div class="float-left user-img m-r-10">
+                      <a href="#" title="Richard Miles"
+                        ><img
+                          src="images/CD.jfif"
+                          alt=""
+                          class="w-40 rounded-circle" /><span
+                          class="status online"
+                        ></span
+                      ></a>
+                    </div>
+                    <div class="contact-info">
+                      <span class="contact-name text-ellipsis"
+                        >Dr. Cheong Chee Kin</span
+                      >
+                      <span class="contact-date">MS, MD</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-cont">
+                    <div class="float-left user-img m-r-10">
+                      <a href="#" title="John Doe"
+                        ><img
+                          src="images/ID.jpg"
+                          alt=""
+                          class="w-40 rounded-circle" /><span
+                          class="status online"
+                        ></span
+                      ></a>
+                    </div>
+                    <div class="contact-info">
+                      <span class="contact-name text-ellipsis"
+                        >Dr. Suresh
+                      </span>
+                      <span class="contact-date">MBBS</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-cont">
+                    <div class="float-left user-img m-r-10">
+                      <a href="#" title="Richard Miles"
+                        ><img
+                          src="images/MD.jpg"
+                          alt=""
+                          class="w-40 rounded-circle" /><span
+                          class="status away"
+                        ></span
+                      ></a>
+                    </div>
+                    <div class="contact-info">
+                      <span class="contact-name text-ellipsis"
+                        >Dr. Ahmad Ali
+                      </span>
+                      <span class="contact-date">MBBS, MD</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-overlay" data-reff=""></div>
+      <script src="assets/js/jquery-3.2.1.min.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/jquery.slimscroll.js"></script>
+      <script src="assets/js/Chart.bundle.js"></script>
+      <script src="assets/js/chart.js"></script>
+      <script src="assets/js/app.js"></script>
+
+      <!-- FOOTER -->
+      <%- include('footer'); %>
+    </div>
+  </body>
+</html>

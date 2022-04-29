@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UTAR WELLNESS CENTER</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-style.css" />
+  </head>
+  <head>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLPHOHgOSY92xYfFMw2DLRL373OnOCZJ0&callback=initMap"
+      type="text/javascript">
+    </script>
+
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+  <body
+    id="top"
+    data-spy="scroll"
+    data-target=".navbar-collapse"
+    data-offset="50"
+  >
+   
+  <%- include('headerMenu'); %>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/" class="smoothScroll">Home</a></li>
+                <li class="nav-item dropdown has-arrow">
+                  <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                    <span>LOGOUT</span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <form method="POST" action="/patient-logout">
+                      <input type="submit" class="dropdown-item" value="Logout">
+                    </form>
+                    
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </section>
+
+    <section id="news" data-stellar-background-ratio="2.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <!-- SECTION TITLE -->
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h2>Patient Portal</h2>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+              <a href="/assesment">
+                <img
+                  src="images/medical-assessment.png"
+                  class="img-responsive"
+                  alt=""
+                />
+              </a>
+              <div class="news-info">
+                <h3>
+                  <a href="/assesment">
+                    COVID-19 LEVEL OF RISK ASSESSMENT</a
+                  >
+                </h3>
+                <p>
+                  Patient helps to know the level of risk of COVID-19 through
+                  this assessment
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+              <a href="/patient-appointment">
+                <img
+                  src="images/appointment.jpg"
+                  class="img-responsive"
+                  alt=""
+                />
+              </a>
+              <div class="news-info">
+                <h3>
+                  <a href="/patient-appointment">REQUEST AN APPOINTMENT</a>
+                </h3>
+                <p>
+                  To visit a doctor face to face, please request an appointment
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+              <a href="https://covid19.who.int/">
+                <img src="images/WHO1.jpg" class="img-responsive" alt="" />
+              </a>
+              <div class="news-info">
+                <h3>
+                  <a href="https://covid19.who.int/"
+                    >LATEST UPDATES OF COVID-19</a
+                  >
+                </h3>
+                <p>by World Health Organization(WHO)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NEWS -->
+    <section id="news" data-stellar-background-ratio="2.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <!-- SECTION TITLE -->
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h2>Latest News</h2>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+              <a
+                href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/got-your-covid-19-vaccine"
+              >
+                <img src="images/vaccine.jpg" class="img-responsive" alt="" />
+              </a>
+              <div class="news-info">
+                <span>February 10, 2021</span>
+                <h3>
+                  <a
+                    href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/got-your-covid-19-vaccine"
+                    >Got Your COVID-19 Vaccine? 3 Things to Do Now!</a
+                  >
+                </h3>
+
+                <div class="author">
+                  <div class="author-info">
+                    <p>Authors</p>
+                    <h5>Gabor David Kelen, M.D.</h5>
+                    <h5>Lisa Lockerd Maragakis, M.D., M.P.H.</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+              <a href="http://covid-19.moh.gov.my/terkini">
+                <img src="images/MOH.jpg" class="img-responsive" alt="" />
+              </a>
+              <div class="news-info">
+                <span>March 08, 2021</span>
+                <h3>
+                  <a href="http://covid-19.moh.gov.my/terkini"
+                    >Current Situation of COVID-19 in Malaysia</a
+                  >
+                </h3>
+
+                <div class="author">
+                  <div class="author-info">
+                    <p>By</p>
+                    <h5>Ministry of Health Malaysia</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+              <a
+                href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+              >
+                <img src="images/symptoms.jfif" class="img-responsive" alt="" />
+              </a>
+              <div class="news-info">
+                <span>February 22, 2021</span>
+                <h3>
+                  <a
+                    href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+                    >Symptoms of COVID-19</a
+                  >
+                </h3>
+
+                <div class="author">
+                  <div class="author-info">
+                    <p>By</p>
+                    <h5>Centers for Disease Control and Prevention(CDC)</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include('footer'); %>
+  </body>
+</html>

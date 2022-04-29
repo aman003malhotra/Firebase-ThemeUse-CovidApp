@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>UTAR WELLNESS CENTER</title>
+
+
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+     
+     <%- include('headerMenu'); %>
+     <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/patientportal" class="smoothScroll">Dashboard</a></li>
+            <li class="nav-item dropdown has-arrow">
+              <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                <span>LOGOUT</span>
+              </a>
+              <div class="dropdown-menu">
+                <form method="POST" action="/admin-logout">
+                  <input type="submit" class="dropdown-item" value="Logout">
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+</div></section>
+
+   <body>
+        <div class="container" style="margin:0 auto">
+          <% if (message != null) {%>
+            <span class="text-success text-center"><%= message%> </span>
+          <% }%>
+          <h3>COVID-19 LEVEL OF RISK ASSESSMENT</h3>
+          <h5>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+               Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment. If you think you may be at risk for Coronavirus (COVID-19), take our risk assessment to find out your risk and what to do next. Before you start answering the risk assessment, please take note following:
+               
+               <br> <br>1.This tool is only meant for analyze the level of risk of COVID-19. The consultation with health care provider will take place only for high risk and moderate risk patients on fixed appointment. If the patient is in an emergency medical situation, call 999 or local emergency number immediately.
+               
+               <br><br>2.There is changing constantly information about COVID-19. And the severity of COVID-19 , such as the availability of research, varies by population. Please visit our website, moe.gov, or WHO for latest information on COVID-19 and specifics on testing and other health measures.</h5>
+          <hr>
+              <form action="/assesment" name="my form" method="POST">
+                1. First Name:<br> <input type= "text" name ="firstname"><hr>
+                2. Last Name:<br> <input type="text" name="lastname"><hr>
+                3. Gender: <br>
+                <input type="radio" name="sex"value="male">Male<br>
+                <input type="radio" name="sex"value="female">Female<hr>
+                4. Age: <br>
+                <input type="radio" name="age"value="Under 12 years">Under 12 years<br>
+                <input type="radio" name="age"value="13 - 17 years">13 - 17 years<br>
+                <input type="radio" name="age"value="18 - 24 years">18 - 24 years<br>
+                <input type="radio" name="age"value="25 - 29 years">25 - 29 years<br>
+                <input type="radio" name="age"value="30 - 34 years">30 - 34 years<br>
+                <input type="radio" name="age"value="35 - 39 years">35 - 39 years<br>
+                <input type="radio" name="age"value="40 -44 years">40 -44 years<br>
+                <input type="radio" name="age"value="45 - 49 years">45 - 49 years<br>
+                <input type="radio" name="age"value="Above 50 years old">Above 50 years old<br>
+                <input type="radio" name="age"value="Prefer not to say">Prefer not to say<hr>
+                
+                <h4>COVID-19 Symptoms and Experience</h4>
+                5. Have you been diagnosed with COVID-19 in the past months and recovered?: <br>
+                <input type="radio" name="prevDiagnosed"value="yes">Yes<br>
+                <input type="radio" name="prevDiagnosed"value="no">No<hr>
+                6. In the last 48 hours, have you experienced any of the following symptoms: <br>
+                <input type="checkbox" name="symptoms1"value="cough">Cough<br>
+                <input type="checkbox" name="symptoms1"value="shortness of breath">Shortness of breath<br>
+                <input type="checkbox" name="symptoms1"value="difficulty in breathing">Difficulty in breathing<br>
+                <input type="checkbox" name="symptoms1"value="sudden new onset of anosmia (loss of smell)">Sudden new onset of anosmia (loss of smell)<br>
+                <input type="checkbox" name="symptoms1"value="sudden new onset of ageusia (loss of taste)">Sudden new onset of ageusia (loss of taste)<br>
+                <input type="checkbox" name="symptoms1"value="none of the Above">None of the Above<hr>
+                7. In the last 48 hours, have you experienced any of the following symptoms: <br>
+                <input type="checkbox" name="symptoms2"value="fever">Fever<br>
+                <input type="checkbox" name="symptoms2"value="chills">Chills<br>
+                <input type="checkbox" name="symptoms2"value="rigors">Rigors<br>
+                <input type="checkbox" name="symptoms2"value="myalgia">Myalgia<br>
+                <input type="checkbox" name="symptoms2"value="headache">Headache<br>
+                <input type="checkbox" name="symptoms2"value="sore throat">Sore Throat<br>
+                <input type="checkbox" name="symptoms2"value="nausea">Nausea<br>
+                <input type="checkbox" name="symptoms2"value="vomiting">Vomiting<br>
+                <input type="checkbox" name="symptoms2"value="diarrhea">Diarrhea<br>
+                <input type="checkbox" name="symptoms2"value="fatigue">Fatigue<br>
+                <input type="checkbox" name="symptoms2"value="conjunctivities">Conjunctivities<br>
+                <input type="checkbox" name="symptoms2"value="running nose">Running nose<br>
+                <input type="checkbox" name="symptoms2"value="none of the above">None of the Above<hr>
+                8. In the last 48 hours, have you experienced any of the following severe respiratory illness: <br>
+                <input type="checkbox" name="respIllness"value="acute respiratory distress syndrome (ARDS)">Acute respiratory distress syndrome (ARDS)<br>
+                <input type="checkbox" name="respIllness"value="running nose">Clinical evidence of pneumonia<br>
+                <input type="checkbox" name="respIllness"value="none of the above">None of the Above<hr>
+                9.In the past 2 weeks, had you traveled to foreign country? <br>
+                <input type="radio" name="abroadVisit"value="yes">Yes<br>
+                <input type="radio" name="abroadVisit"value="no">No<hr>
+                10. In the past 2 weeks, had you traveled in public transport? <br>
+                <input type="radio" name="pubVehUsed"value="yes">Yes<br>
+                <input type="radio" name="pubVehUsed"value="no">No<hr>
+                11. In the past 2 weeks, did you attended any events or areas associated with known COVID-19 cluster/red zones? <br>
+                <input type="radio" name="visitRedZone"value="yes">Yes<br>
+                <input type="radio" name="visitRedZone"value="no">No<hr>
+                12.In the past 2 weeks, did you have contact with someone who had symptoms of COVID-19, but who had not yet tested positive or had not yet had a test?<br> 
+                <input type="radio" name="closeContactwithSymptomatic"value="yes">Yes<br>
+                <input type="radio" name="closeContactwithSymptomatic"value="no">No<hr>
+                13. In the past 2 weeks, did you have contact with a known COVID-19 case?  <br>
+                <input type="radio" name="closeContactPatient"value="yes">Yes<br>
+                <input type="radio" name="closeContactPatient"value="no">No<hr>
+                14. Did you consult with a healthcare provider or try to get a coronavirus test because of your symptoms? <br>
+                <input type="radio" name="consulOrTest"value="yes">Yes<br>
+                <input type="radio" name="consulOrTest"value="no">No<hr>
+                15.If you consult with a health care provider, did he/she give you any of the following medications to treat COVID-19? <br>
+                <input type="checkbox" name="medicine"value="Lopinavir/Ritonavir (Kaletra)">Lopinavir/Ritonavir (Kaletra)<br>
+                <input type="checkbox" name="medicine"value="Hydroxychloroquine (Plaquenil)r">Hydroxychloroquine (Plaquenil)<br>
+                <input type="checkbox" name="medicine"value="Hydroxychloroquine (Plaquenil) with azithromycin (Z-pak)">Hydroxychloroquine (Plaquenil) with azithromycin (Z-pak)<br>
+                <input type="checkbox" name="medicine"value="Chloroquine">Chloroquine<br>
+                <input type="checkbox" name="medicine"value="Ribavirin, also known as Moderiba or Rebetol">Ribavirin, also known as Moderiba or Rebetol<br>
+                <input type="checkbox" name="medicine"value="Remdesivirr">Remdesivir<br>
+                <input type="checkbox" name="medicine"value="Azithromycin (Z-pak)">Azithromycin (Z-pak)r<br>
+                <input type="checkbox" name="medicine"value="Oseltamivir (Tamiflu)">Oseltamivir (Tamiflu)<br>
+                <input type="checkbox" name="medicine"value="Blood from someone who was previously infected (convalescent plasma)">Blood from someone who was previously infected (convalescent plasma)r<br>
+                <input type="checkbox" name="medicine"value="Vitamin C">  Vitamin C<br>
+                <input type="checkbox" name="medicine"value="Zinc">Zinc<br>
+                <input type="checkbox" name="medicine"value="None of the Above">None of the Above<br>
+                <input type="checkbox" name="medicine"value="Other">Other<br>
+                <input type="submit" value="Submit">
+          </form>
+        </div>
+    
+</body>
+
+ <!-- FOOTER -->
+ <%- include('footer'); %>
+</body>
+</html>
+</script>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UTAR WELLNESS CENTER</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/css/tooplate-style.css" />
+  </head>
+  <body
+    id="top"
+    data-spy="scroll"
+    data-target=".navbar-collapse"
+    data-offset="50"
+  >
+    <%- include('headerMenu'); %>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#news" class="smoothScroll">Services</a></li>
+        <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+        <li class="nav-item dropdown has-arrow">
+          <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+            <span>Sign In</span>
+          </a>
+          <div class="dropdown-menu">
+              <a class="dropdown-item" href="/patient-signin">Patient Portal</a>
+              <a class="dropdown-item" href="/admin-signin">Admin Portal</a> 
+          </div>
+        </li>
+      </ul>
+    </div>
+</div></section>
+
+    <!-- HOME -->
+    <section id="home" class="slider" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="owl-carousel owl-theme">
+            <div class="item item-first">
+              <div class="caption">
+                <div class="col-md-offset-1 col-md-10">
+                  <h3>Let's spread Covid-19 Awareness</h3>
+                  <h1>UTAR WELLNESS CENTRE</h1>
+                  <a
+                    href="#google-map"
+                    class="section-btn btn btn-default smoothScroll"
+                    >CONTACT US</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="item item-second">
+              <div class="caption">
+                <div class="col-md-offset-1 col-md-10">
+                  <h3>
+                    DO YOU WANT TO KNOW YOU ARE INFECTED IN COVID-19 OR NOT?
+                  </h3>
+                  <h1>COVID-19 LEVEL OF RISK ASSESSMENT</h1>
+                  <a
+                    href="/signup"
+                    class="section-btn btn btn-default btn-gray smoothScroll"
+                    >TAKE THE ASSESMENT</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="item item-third">
+              <div class="caption">
+                <div class="col-md-offset-1 col-md-10">
+                  <h3>TO KNOW MORE ABOUT COVID-19</h3>
+                  <h1>COVID-19 UPDATES</h1>
+                  <a
+                    href="#news"
+                    class="section-btn btn btn-default btn-blue smoothScroll"
+                    >LATEST UPDATES</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="about-info">
+              <h2 class="wow fadeInUp" data-wow-delay="0.6s">
+                Welcome to e-UTAR Healthcare System
+              </h2>
+              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                <p>Your In Campus Health Provider</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" data-stellar-background-ratio="2.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <!-- SECTION TITLE -->
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h2>Latest News</h2>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+              <a
+                href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/got-your-covid-19-vaccine"
+              >
+                <img src="images/vaccine.jpg" class="img-responsive" alt="" />
+              </a>
+              <div class="news-info">
+                <span>February 10, 2021</span>
+                <h3>
+                  <a
+                    href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/got-your-covid-19-vaccine"
+                    >Got Your COVID-19 Vaccine? 3 Things to Do Now!</a
+                  >
+                </h3>
+                <div class="author">
+                  <div class="author-info">
+                    <p>Authors</p>
+                    <h5>Gabor David Kelen, M.D.</h5>
+                    <h5>Lisa Lockerd Maragakis, M.D., M.P.H.</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+              <a href="http://covid-19.moh.gov.my/terkini">
+                <img src="images/MOH.jpg" class="img-responsive" alt="" />
+              </a>
+              <div class="news-info">
+                <span>March 08, 2021</span>
+                <h3>
+                  <a href="http://covid-19.moh.gov.my/terkini"
+                    >Current Situation of COVID-19 in Malaysia</a
+                  >
+                </h3>
+                <div class="author">
+                  <div class="author-info">
+                    <p>By</p>
+                    <h5>Ministry of Health Malaysia</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+              <a
+                href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+              >
+                <img src="images/symptoms.jfif" class="img-responsive" alt="" />
+              </a>
+              <div class="news-info">
+                <span>February 22, 2021</span>
+                <h3>
+                  <a
+                    href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+                    >Symptoms of COVID-19</a
+                  >
+                </h3>
+                <div class="author">
+                  <div class="author-info">
+                    <p>By</p>
+                    <h5>Centers for Disease Control and Prevention(CDC)</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE MAP -->
+    <section id="google-map" class="text-center">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.3930663790375!2d101.14012061401746!3d4.3370825968477025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cae2c0f0b0ce99%3A0xa2e085d7bcc7a63f!2sWellness%20Medical%20Centre%20(UTAR%20Kampar%20Campus)!5e0!3m2!1sen!2smy!4v1613943187895!5m2!1sen!2smy"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include('footer'); %>
+  </body>
+</html>
